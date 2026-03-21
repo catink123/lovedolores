@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Love Dolores</title>
     <script src="https://telegram.org/js/telegram-web-app.js?61" defer></script>
     <style>
         body {
             display: grid;
             place-items: center;
+            height: var(--tg-viewport-height);
         }
 
         button {
             padding: 5px 10px;
             background: transparent;
             border: 1px solid black;
+            touch-action: manipulation;
         }
 
         button:active {
@@ -24,8 +26,10 @@
     </style>
 </head>
 <body>
-    <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccured('rigid')">Haptic 1</button>
-    <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccured('soft')">Haptic 2</button>
-    <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccured('heavy')">Haptic 3</button>
+    <div>
+        <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccurred('rigid')">Haptic 1</button>
+        <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccurred('soft')">Haptic 2</button>
+        <button onclick="window.Telegram.WebApp.HapticFeedback.impactOccurred('heavy')">Haptic 3</button>
+    </div>
 </body>
 </html>
