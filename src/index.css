@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Serif';
+  user-select: none;
+}
+
+#root {
+  /* REMOVED grid and place-items */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:active {
+  background: white;
+  color: black;
+}
+
+button.icon-button {
+  padding: 5px;
+  line-height: 12px;
+}
